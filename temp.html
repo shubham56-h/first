@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good Morning Mannu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      color: #2c2c2c;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+      animation: fadeIn 2s ease-in-out;
+      position: relative;
+      z-index: 1;
+    }
+    .floating-hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .floating-hearts span {
+      position: absolute;
+      display: block;
+      color: #ff3e6c;
+      font-size: 24px;
+      animation: float 10s linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+    .message {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      animation: slideUp 2s ease-out;
+    }
+    .message h2 {
+      font-size: 2.5em;
+      color: #e91e63;
+    }
+    .message p {
+      font-size: 1.2em;
+      margin-top: 20px;
+      line-height: 1.7;
+    }
+    .photo-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px auto;
+      max-width: 700px;
+      padding: 0 20px;
+    }
+    .photo-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 2em;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+    .photo-gallery img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .photo-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .music {
+      margin-top: 40px;
+      text-align: center;
+      animation: slideUp 2s ease-out;
+    }
+    .surprise-btn {
+      display: inline-block;
+      padding: 15px 40px;
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: white;
+      background: linear-gradient(to right, #ff0084, #ffb199);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      animation: fadeIn 2.5s ease-in-out, pulse 2s infinite;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+      transition: transform 0.3s ease;
+    }
+    .surprise-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #ff4d94, #ffc1cc);
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 105, 180, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 105, 180, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 105, 180, 0); }
+    }
+    #popup-message {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff0f5;
+      color: #c2185b;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      z-index: 9999;
+      text-align: center;
+      font-size: 1.4em;
+      max-width: 90%;
+    }
+    #popup-message button {
+      margin-top: 20px;
+      background: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 1.2em;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-hearts">
+    <span style="left: 10%; animation-delay: 0s;">❤️</span>
+    <span style="left: 20%; animation-delay: 2s;">💖</span>
+    <span style="left: 30%; animation-delay: 4s;">💘</span>
+    <span style="left: 40%; animation-delay: 1s;">💝</span>
+    <span style="left: 50%; animation-delay: 3s;">❤️</span>
+    <span style="left: 60%; animation-delay: 5s;">💖</span>
+    <span style="left: 70%; animation-delay: 1s;">💘</span>
+    <span style="left: 80%; animation-delay: 2s;">💝</span>
+    <span style="left: 90%; animation-delay: 4s;">❤️</span>
+  </div>
+
+  <header>
+    Good Morning uhhh, My Wifuuuuu 😚😚😚😚😚😚😘😘😘
+  </header>
+
+  <section class="message">
+    <h2>I Love You, Forever & Always 💖</h2>
+    <p>
+      Rise and shine, my sunshine ☀️<br>
+      As the day begins, I just want to say...<br>
+      You are the reason I smile, the beat of my heart, and the love of my life.<br>
+      Today, like every day, I am sending you all my love wrapped in a virtual hug 🤗<br>
+      May your day be as beautiful and magical as you are to me.
+    </p>
+    <button class="surprise-btn" onclick="document.getElementById('popup-message').style.display='block';">Tap for Surprise 💌</button>
+  </section>
+
+  <div id="popup-message">
+    Kisiko batana mat 😉, me savan somvar rakhne vala hu baby🤭 💖🌈<br>
+    <button onclick="document.getElementById('popup-message').style.display='none';">Close</button>
+  </div>
+
+  <section class="photo-gallery">
+    <div class="photo-title">Roses for uhhh 🌹</div>
+    <img src="https://th.bing.com/th/id/R.60198312f4e1afcfd06049a0a418c44a?rik=h6%2fP602Du%2b8OjA&riu=http%3a%2f%2fimages5.fanpop.com%2fimage%2fphotos%2f29800000%2froses-roses-29851103-1600-1200.jpg&ehk=Xg6Eqx5Eh3p6PvNskefAT5rgi0Nq%2bzDt0cLpsu4I0lY%3d&risl=&pid=ImgRaw&r=0" alt="Roses">
+  </section>
+
+  <footer>
+    Sending warm hugs and kisses 😚😚😚😚😚😚😚😚😚😘😘😘🤗🤗 — Have a magical day uhhh, Cutie pie
+  </footer>
+</body>
+</html>
